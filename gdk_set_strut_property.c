@@ -20,7 +20,7 @@ void set_strut_properties(GtkWindow *window,
 	data[11] = bottom_end_x;
 
 	gdk_property_change(GTK_WIDGET(window)->window,
-				gdk_atom_intern("_NET_WM_STRUT_PARTIAL", FALSE),
-				gdk_atom_intern ("CARDINAL", FALSE),
+				gdk_atom_intern("_NET_WM_STRUT_PARTIAL", TRUE),
+				gdk_atom_intern ("CARDINAL", TRUE),
 				32, GDK_PROP_MODE_REPLACE, (unsigned char *)data, 12);
 }
